@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--Doc type -->
+<html>
+<head>
+<title>java script program 1</title>
+</head>
+<body>
+
+<form>
+<label> enter a number </label>
+<input type="text" name="text" id="txt" value=""/>
+<input type="button" name="submit" value="submit" onclick="myfuct()" />
+</form>
+<p id="para" > </p>
+<script>
+function myfuct()
+{
+var x=document.getElementById("txt").value;
+
+if(x=="") throw document.getElementById("para").innerHTML="nothing is entered in text box";
+
+if(isNaN(x)) throw document.getElementById("para").innerHTML=" is not a number"
+try
+{
+if(x%3==0 || x%7==0)
+{
+document.getElementById("para").innerHTML="The entered number is divisible by 3 or 7 "
+}
+else
+{
+document.getElementById("para").innerHTML="the entered number is not dividible by 3 or 7"
+}
+}
+catch(err)
+{
+alert("error "+err);
+}
+
+}
+</script>
+
+</body>
+</html>

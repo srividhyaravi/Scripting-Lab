@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <fieldset>
+            <legend>Item Catalogue</legend>
+           name: <input type="text" id="itemname" ><br><br>
+           price: <input type="number" id="price">
+
+            quantity:<input type="number" id="qty" ><br><br>
+            <button  onclick="calc()">submit</button>
+        </fieldset>
+        <h2>Result Amount:</h2>
+        <p id="res"></p>
+        <button  onclick="display()" >Paid</button>
+        <script>
+            function calc(){
+                 var amount=parseInt(document.getElementById('qty').value)*parseInt(document.getElementById('price').value)
+                document.getElementById('res').innerHTML=amount
+
+            }
+            function display(){
+                alert("Paid rs: "+document.getElementById('res').innerHTML)
+
+            }
+        </script>
+    </body>
+</html>

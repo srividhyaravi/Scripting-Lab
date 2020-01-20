@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+ <h1>hospital details</h1>
+ hospital name:<p id="hname" ></p><br>
+ hospital loc:<p id="hloc" ></p><br>
+
+ <p id="pdetails" onmouseover="Pdetails()" onmouseout="premove()">view patient details</p>
+ <p id="para"></p>
+</body>
+<script src="hospital.json"></script>
+<script src="patient.json"></script>
+
+<script>
+var hosp=JSON.parse(h);
+var myhosp=hosp[0];
+document.getElementById("hname").innerHTML=myhosp.name;
+document.getElementById("hloc").innerHTML=myhosp.loc;
+
+function Pdetails(){
+	var pat=JSON.parse(p);
+var mypat=pat[0];
+document.getElementById("para").innerHTML="  pname: "+mypat.name+"  aadharno: "+mypat.aadharno+" tests: "+mypat.tests;
+
+}	
+
+function premove()
+{
+	document.getElementById("para").innerHTML=" ";
+
+}
+</script>
+<style>
+#pdetails:hover{
+color:red;
+}
+</style>
+</html>
+
+
+

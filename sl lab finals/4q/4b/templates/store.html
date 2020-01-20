@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>store</title>
+</head>
+<body>
+<form action="{{url_for('store')}}" method="post">
+    <input type="number" name="eggs" />eggs
+    <input type="number" name="bread"/>bread
+    <input type="number" name="biscuit"/>biscuit
+    <input type="submit" value="add to cart">
+</form>
+<a href="{{url_for('cart')}}">view ur cart</a>
+</body>
+</html>

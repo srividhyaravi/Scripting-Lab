@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table border="2px">
+    <tr>
+    <th>name</th>
+    <th>country</th>
+    <th>title</th>
+    <th>year</th>
+    </tr>
+
+ <tr>
+     <td id="name0"></td>
+     <td id="country0"></td>
+     <td id="title0"></td>
+     <td id="year0"></td>
+
+ </tr>
+
+     <tr>
+     <td id="name1"></td>
+     <td id="country1"></td>
+     <td id="title1"></td>
+     <td id="year1"></td>
+
+ </tr>
+</table>
+<p id="author2"></p>
+<p id="author3"</p>
+
+
+<script>
+    var obj0={"name":"nidhi","country":"india","title":"i love u","year":"1999"};
+    document.getElementById("name0").innerHTML=obj0.name;
+    document.getElementById("country0").innerHTML=obj0.country;
+    document.getElementById("title0").innerHTML=obj0.title;
+    document.getElementById("year0").innerHTML=obj0.year;
+
+      var obj1={"name":"nidhi","country":"india","title":"i love u","year":"1999"};
+    document.getElementById("name1").innerHTML=obj1.name;
+    document.getElementById("country1").innerHTML=obj1.country;
+    document.getElementById("title1").innerHTML=obj1.title;
+    document.getElementById("year1").innerHTML=obj1.year;
+
+    var obj2={"name":"nidhi","country":"india","title":"i love u","year":"1999"};
+    document.getElementById("author2").innerHTML=obj2.name+"<br>"+obj2.country+"<br><br>"+obj2.title+"<br><br>"+obj2.year;
+     var obj3={"name":"nidhi","country":"india","title":"i love u","year":"1999"};
+    document.getElementById("author3").innerHTML=obj3.name+"<br>"+obj3.country+"<br>"+obj3.title+"<br>"+obj3.year;
+
+</script>
+</body>
+</html>

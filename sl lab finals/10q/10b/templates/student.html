@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>student details</title>
+<body>
+<h1>result:{{msg}}</h1>
+<form action="{{url_for('index')}}" method="post">
+    usn['1MS16EC086']:<input type="text" name="usn" id="usn" ><br>
+    dob['20/1/2000']:<input type="text" name="dob" id="dob"><br>
+    marks1:<input type="number" name="m1" value="m1" id="m1"><br>
+     marks2:<input type="number" name="m2" value="m2" id="m2"><br>
+     marks3:<input type="number" name="m3" value="m3" id="m3"><br>
+    <input type="submit" name="action" value="submit" onclick="check()"><br>
+</form>
+<script>
+    function check()
+    {
+    if(document.getElementById("usn").value==" " || document.getElementById("dob").value==" " || document.getElementById("m1").value==" " || document.getElementById("m2").value==" "|| document.getElementById("m3").value==" ")
+      alert("cant enter negative values");
+     }
+</script>
+</body>
+</html>

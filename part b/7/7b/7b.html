@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+var a=[];
+var sum=0;
+var csub=[];
+csub[1]=4;
+csub[2]=4;
+csub[3]=4;
+csub[4]=4;
+csub[5]=4;
+function calculate(s)
+{
+   var y="sub"+s;
+   var v=document.getElementById(y).value;
+   var op=parseInt(v,10);
+    if(v=="")
+    {
+alert("enter the marks of subjects");
+    }
+    else if(v==null)
+    alert("nothing is entered");
+    else if(isNaN(v))
+    alert("enter the numbers only");
+    else if(op>100 || op<0)
+{
+alert("enter the correct marks");
+}
+else{
+var points;
+  if(op>=90)
+  {
+  document.getElementById(s).value="S+";
+  points=10;
+  }
+  else if(80<=op && op<90)
+  {
+  document.getElementById(s).value="S";
+  points=9;
+  }
+  else if(70<=op && op<80)
+  {
+  document.getElementById(s).value="A";
+  points=8;
+  }
+  else if(60<=op && op<70)
+  {
+  document.getElementById(s).value="B";
+  points=7;
+  }
+  else if(50<=op && op<60)
+  {
+  document.getElementById(s).value="C";
+  points=6;
+  }
+  else if(45<=op && op<50)
+  {
+  document.getElementById(s).value="D";
+  points=5;
+  }
+  else if(40<=op && op<45)
+  {
+  document.getElementById(s).value="E";
+  points=4;
+  }
+  else
+  {
+  document.getElementById(s).value="F";
+  points=0;
+  }
+  a[parseInt(s)]=points;
+}
+     
+
+}
+function mycgpa()
+{
+
+for(var i=1;i<6;i++)
+{
+sum=sum+a[i]*csub[i];
+}
+sum=sum/20;
+document.getElementById("para").innerHTML="your cgpa is "+sum;
+}
+</script>
+<h3>enter the usn</h3>
+<input id="usn"/>
+<h3>enter the name</h3>
+<input id="name"/>
+<div>sub1 <input id="sub1"/><button onclick="calculate('1')">submit</button><input id="1" readonly style="width:40px;border:3px solid black;"/></div>
+<div>sub2 <input id="sub2"/><button onclick="calculate('2')">submit</button><input id="2" readonly style="width:40px;border:3px solid black;"/></div>
+<div>sub3 <input id="sub3"/><button onclick="calculate('3')">submit</button><input id="3" readonly  style="width:40px;border:3px solid black;"/></div>
+<div>sub4 <input id="sub4"/><button onclick="calculate('4')">submit</button><input id="4" readonly  style="width:40px;border:3px solid black;"/></div>
+<div>sub5 <input id="sub5"/><button onclick="calculate('5')">submit</button><input id="5" readonly  style="width:40px;border:3px solid black;"/></div>
+<button onclick="mycgpa()">get my cgpa</button>
+<p id="para"></p>
+
+</body>
+
+</html>
